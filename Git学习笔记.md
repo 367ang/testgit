@@ -73,12 +73,12 @@ git branch
 git branch <branch-name>
 
 # 切换分支
-git checkout <branch-name>
-git switch <branch-name>  # 新版本推荐
+git switch <branch-name> # Git 2.23+ 推荐使用
+git checkout <branch-name> # 传统方式，不推荐
 
 # 创建并切换分支
-git checkout -b <branch-name>
-git switch -c <branch-name>
+git switch -c <branch-name> # Git 2.23+ 推荐使用
+git checkout -b <branch-name> # 传统方式
 
 # 合并分支
 git merge <branch-name>
