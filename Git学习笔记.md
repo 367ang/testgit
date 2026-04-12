@@ -23,7 +23,7 @@ Git 是一个分布式版本控制系统，核心概念包括：
 - **本地仓库 (Local Repository)**：存储提交历史的地方
 - **远程仓库 (Remote Repository)**：托管在服务器上的仓库
 
-> [!tip]
+> [!tip] 核心概念
 > Git 的三个区域概念是理解其工作流程的关键
 
 ## 常用命令
@@ -49,18 +49,18 @@ git config --list
 git status
 
 # 添加文件到暂存区
-git add <file>           # 添加指定文件
-git add .                # 添加所有文件
-git add -u               # 添加已修改和删除的文件（不包括新文件）
+git add <file> # 添加指定文件
+git add . # 添加所有文件
+git add -u # 添加已修改和删除的文件（不包括新文件）
 
 # 提交更改
 git commit -m "提交信息"
-git commit -a -m "提交信息"  # 跳过暂存区，直接提交已跟踪文件
+git commit -a -m "提交信息" # 跳过暂存区，直接提交已跟踪文件
 
 # 查看提交历史
 git log
-git log --oneline        # 简洁格式
-git log --graph          # 图形化显示分支
+git log --oneline # 简洁格式
+git log --graph # 图形化显示分支
 ```
 
 ### 分支管理
@@ -74,7 +74,7 @@ git branch <branch-name>
 
 # 切换分支
 git switch <branch-name> # Git 2.23+ 推荐使用
-git checkout <branch-name> # 传统方式，不推荐
+git checkout <branch-name> # 传统方式
 
 # 创建并切换分支
 git switch -c <branch-name> # Git 2.23+ 推荐使用
@@ -84,8 +84,8 @@ git checkout -b <branch-name> # 传统方式
 git merge <branch-name>
 
 # 删除分支
-git branch -d <branch-name>   # 删除已合并的分支
-git branch -D <branch-name>   # 强制删除分支
+git branch -d <branch-name> # 删除已合并的分支
+git branch -D <branch-name> # 强制删除分支
 ```
 
 ### 远程操作
@@ -98,13 +98,13 @@ git remote add origin <repository-url>
 git remote -v
 
 # 拉取代码
-git fetch                    # 只获取不合并
-git pull                     # 获取并合并
-git pull origin <branch>     # 指定分支
+git fetch # 只获取不合并
+git pull # 获取并合并
+git pull origin <branch> # 指定分支
 
 # 推送代码
 git push origin <branch>
-git push -u origin <branch>  # 第一次推送并设置上游分支
+git push -u origin <branch> # 第一次推送并设置上游分支
 ```
 
 ### 撤销和修改
@@ -120,24 +120,24 @@ git restore <file>
 git commit --amend
 
 # 回退到之前的版本
-git reset --hard <commit-hash>  # 彻底回退（慎用）
+git reset --hard <commit-hash> # 彻底回退（慎用）
 git reset --mixed <commit-hash> # 默认模式，保留工作区修改
-git reset --soft <commit-hash>  # 只移动HEAD，保留暂存区和工作区
+git reset --soft <commit-hash> # 只移动HEAD，保留暂存区和工作区
 ```
 
 ### 标签管理
 
 ```bash
 # 创建标签
-git tag <tag-name>              # 轻量标签
-git tag -a <tag-name> -m "信息"  # 注释标签
+git tag <tag-name> # 轻量标签
+git tag -a <tag-name> -m "信息" # 注释标签
 
 # 查看标签
 git tag
 
 # 推送标签
 git push origin <tag-name>
-git push origin --tags          # 推送所有标签
+git push origin --tags # 推送所有标签
 
 # 删除标签
 git tag -d <tag-name>
@@ -171,7 +171,7 @@ graph LR
 
 ## 常见问题处理
 
-> [!warning]
+> [!warning] 警告
 > 以下操作可能导致数据丢失，请谨慎使用
 
 ### 合并冲突解决
@@ -192,7 +192,7 @@ git reset --hard HEAD@{n}
 
 ## 最佳实践
 
-> [!success]
+> [!success] 良好习惯
 > 良好的 Git 使用习惯
 
 1. **频繁提交**：保持提交粒度小，每次提交只做一件事
@@ -207,7 +207,7 @@ git reset --hard HEAD@{n}
 - [[Pro Git书籍]]
 - [[GitHub帮助文档]]
 
-> [!info]
+> [!info] 更新信息
 > 最后更新：2026-04-12
 > 此笔记将持续更新，欢迎补充完善
 > 该笔记由 AI 生成，请注意鉴别
