@@ -37,7 +37,11 @@
       "Bash(rm -rf .trees/)",
       "Bash(git merge:*)",
       "Skill(update-config)",
-      "Bash(git worktree:*)"
+      "Bash(git worktree:*)",
+      "Bash(git log:*)",
+      "Bash(curl:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)"
     ]
   },
   "hooks": {
