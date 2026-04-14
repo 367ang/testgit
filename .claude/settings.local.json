@@ -41,7 +41,9 @@
       "Bash(git log:*)",
       "Bash(curl:*)",
       "Bash(git remote:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git stash:*)",
+      "Bash(git branch:*)"
     ]
   },
   "hooks": {
