@@ -31,11 +31,27 @@
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_snapshot",
-      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__click",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script",
       "mcp__plugin_chrome-devtools-mcp_chrome-devtools__press_key",
       "Bash(git rm:*)",
-      "Bash(rm -rf .trees/)"
+      "Bash(rm -rf .trees/)",
+      "Bash(git merge:*)",
+      "Skill(update-config)",
+      "Bash(git worktree:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git status 2>/dev/null || true",
+            "statusMessage": "Checking git status..."
+          }
+        ]
+      }
     ]
   }
 }
